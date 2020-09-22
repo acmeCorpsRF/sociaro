@@ -1,0 +1,12 @@
+.times-of-day {
+  padding-top: 300px;
+
+  &.day {
+    background: url('../../../assets/img/sky-background-day.png') top center, no-repeat;
+  }
+
+  &.night {
+    background: url('../../../assets/img/sky-background-night.png') top center, no-repeat;
+  }
+
+}

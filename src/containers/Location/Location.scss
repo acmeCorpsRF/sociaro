@@ -1,0 +1,84 @@
+.location {
+  position: absolute;
+  top: 29px;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 20px 20px 20px;
+  background-color: #ffffff;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+
+  &__title {
+    font: {
+      size: 16px;
+      family: Barlow-Medium, sans-serif;
+    }
+    color: #999999;
+    text-align: center;
+  }
+
+  &__form {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: 27px;
+
+    &-input {
+      width: 100%;
+      height: 40px;
+      padding-right: 30px;
+      padding-left: 14px;
+      font: {
+        size: 16px;
+        family: Barlow-Medium, sans-serif;
+      }
+      background: url('../../../assets/img/icons/place.svg') 306px center no-repeat, #f3f3f3;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #f3f3f3;
+      border-radius: 4px;
+      box-shadow: 0 30px 15px 0 rgba(255, 255, 255, 1);
+
+      &.error {
+        border-color: red;
+      }
+
+      &.found {
+        border-color: green;
+      }
+    }
+
+    &-message {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      padding-right: 14px;
+      padding-left: 14px;
+      font: {
+        size: 16px;
+        family: Barlow-Medium, sans-serif;
+      }
+      line-height: 40px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.5);
+
+      &.visible {
+        display: block;
+
+        &:hover {
+          background-color: lighten(green, 70%);
+        }
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}

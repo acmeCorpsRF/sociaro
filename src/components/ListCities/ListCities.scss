@@ -1,0 +1,43 @@
+.cities {
+  width: 100%;
+  padding-top: 30px;
+  overflow-y: auto;
+
+  &__list {
+    list-style-type: none;
+
+    &-item {
+      display: flex;
+      align-items: center;
+
+      &-link {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 14px;
+        padding-left: 14px;
+        font: {
+          size: 18px;
+          family: Barlow-Regular, sans-serif;
+        }
+        line-height: 40px;
+        color: #444444;
+        border-radius: 4px;
+
+        &:hover {
+          font: {
+            family: Barlow-Medium, sans-serif;
+          }
+          background-color: #ecf7fd;
+        }
+      }
+
+      &-temperature {
+        font: {
+          size: 16px;
+          family: Barlow-Light, sans-serif;
+        }
+      }
+    }
+  }
+}

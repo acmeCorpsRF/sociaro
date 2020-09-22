@@ -1,0 +1,71 @@
+@font-face {
+  src: url('../assets/fonts/Barlow/Barlow-Light.ttf');
+  font-family: Barlow-Light;
+}
+
+@font-face {
+  src: url('../assets/fonts/Barlow/Barlow-Medium.ttf');
+  font-family: Barlow-Medium;
+}
+
+@font-face {
+  src: url('../assets/fonts/Barlow/Barlow-Regular.ttf');
+  font-family: Barlow-Regular;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button, input, textarea, select, option {
+  border: none;
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, input, button, button {
+  transition-property: color, background-image, background-color, transform, opacity, box-shadow, border;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
+  height: inherit;
+}
+
+.container {
+  position: relative;
+  height: inherit;
+  max-width: 375px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}

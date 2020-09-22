@@ -1,0 +1,69 @@
+.week {
+  padding-right: 18px;
+  padding-bottom: 42px;
+  padding-left: 18px;
+
+  &__list {
+    list-style-type: none;
+
+    &-item {
+      height: 100px;
+      padding-top: 52px;
+      text-align: center;
+      background-color: #ffffff;
+      background-position: center 15px;
+      background-repeat: no-repeat;
+      background-size: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+
+      &.clouds {
+        background-image: url('../../../assets/img/icons/020-cloudy.svg');
+      }
+
+      &.clear {
+        background-image: url('../../../assets/img/icons/007-sunny-1.svg');
+      }
+
+      &.sunny {
+        background-image: url('../../../assets/img/icons/013-sunny.svg');
+      }
+
+      &-date {
+        font: {
+          size: 16px;
+          family: Barlow-Medium, sans-serif;
+        }
+      }
+
+      &-temperature {
+        margin-top: 2px;
+        font: {
+          size: 8px;
+          family: Barlow-Medium, sans-serif;
+        }
+
+        &-max {
+          padding-right: 10px;
+          padding-left: 10px;
+          background: url('../../../assets/img/icons/arrow-up.svg') 28px 2px no-repeat;
+        }
+
+        &-min {
+          padding-right: 10px;
+          padding-left: 10px;
+          background: url('../../../assets/img/icons/arrow-down.svg') 28px 2px no-repeat;
+        }
+      }
+    }
+
+    .slick-list {
+      overflow: visible;
+    }
+
+    .slick-slide {
+      margin-right: 18px;
+      outline: none;
+    }
+  }
+}

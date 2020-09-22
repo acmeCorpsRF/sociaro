@@ -1,0 +1,277 @@
+.current-city {
+  position: absolute;
+  top: 279px;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+
+  &__short-info {
+    height: 48px;
+    display: flex;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    padding-top: 18px;
+    padding-bottom: 12px;
+    font: {
+      size: 14px;
+      family: Barlow-Regular, sans-serif;
+    }
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: #b2b2b2;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 155px;
+    padding: 12px 26px;
+    font: {
+      size: 16px;
+      family: Barlow-Medium, sans-serif;
+    }
+    color: #0d9fea;
+    background: url('../../../assets/img/icons/location.svg') 125px center no-repeat, #ecf8fe;
+    border-bottom-left-radius: 25px;
+  }
+
+  &__full-info {
+    padding: 30px 18px 13px;
+  }
+
+  &__weather {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 95px);
+    grid-column-gap: 27px;
+    text-align: center;
+  }
+
+  &__sky {
+    padding-top: 43px;
+    font: {
+      size: 18px;
+      family: Barlow-Medium, sans-serif;
+    }
+
+    &.clouds {
+      background: url('../../../assets/img/icons/020-cloudy.svg') center 4px no-repeat;
+    }
+
+    &.clear {
+      background: url('../../../assets/img/icons/007-sunny-1.svg') center 4px no-repeat;
+    }
+
+    &.sunny {
+      background: url('../../../assets/img/icons/013-sunny.svg') center 4px no-repeat;
+    }
+  }
+
+  &__temperature-now {
+    display: flex;
+
+    &-value {
+      margin-left: 17px;
+      font: {
+        size: 64px;
+        family: Barlow-Light, sans-serif;
+      }
+      line-height: 67px;
+      letter-spacing: -3px;
+    }
+
+    &-indicator {
+      margin-top: 6px;
+      margin-left: 3px;
+      font: {
+        size: 24px;
+        family: Barlow-Medium, sans-serif;
+      }
+    }
+  }
+
+  &__temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 11px;
+    padding-bottom: 39px;
+    font: {
+      size: 16px;
+      family: Barlow-Light, sans-serif;
+    }
+
+    &-max {
+      margin-left: 26px;
+      padding-right: 10px;
+      background: url('../../../assets/img/icons/arrow-up.svg') 34px 4px no-repeat;
+    }
+
+    &-min {
+      margin-left: 26px;
+      padding-right: 10px;
+      background: url('../../../assets/img/icons/arrow-down.svg') 34px 8px no-repeat;
+    }
+  }
+
+  &__humidity {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 47px;
+    padding-bottom: 19px;
+    background: url('../../../assets/img/icons/027-humidity.svg') center 11px no-repeat;
+
+    &-value {
+      font: {
+        size: 16px;
+        family: Barlow-Medium, sans-serif;
+      }
+    }
+
+    &-title {
+      font: {
+        size: 8px;
+        family: Barlow-Light, sans-serif;
+      }
+      letter-spacing: 0.5px;
+      text-transform: lowercase;
+    }
+  }
+
+  &__pressure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 47px;
+    padding-bottom: 19px;
+    background: url('../../../assets/img/icons/050-barometer.svg') center 11px no-repeat;
+
+    &-value {
+      font: {
+        size: 16px;
+        family: Barlow-Medium, sans-serif;
+      }
+    }
+
+    &-title {
+      font: {
+        size: 8px;
+        family: Barlow-Light, sans-serif;
+      }
+      letter-spacing: 0.5px;
+      text-transform: lowercase;
+    }
+  }
+
+  &__wind {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 47px;
+    padding-bottom: 19px;
+    background: url('../../../assets/img/icons/001-wind-1.svg') center 11px no-repeat;
+
+    &-value {
+      font: {
+        size: 16px;
+        family: Barlow-Medium, sans-serif;
+      }
+    }
+
+    &-title {
+      font: {
+        size: 8px;
+        family: Barlow-Light, sans-serif;
+      }
+      letter-spacing: 0.5px;
+      text-transform: lowercase;
+    }
+  }
+
+  &__sunrise {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 10px;
+    background: url('../../../assets/img/icons/008-sunrise.svg') center 19px no-repeat;
+
+    &-value {
+      font: {
+        size: 16px;
+        family: Barlow-Medium, sans-serif;
+      }
+    }
+
+    &-title {
+      font: {
+        size: 8px;
+        family: Barlow-Light, sans-serif;
+      }
+      letter-spacing: 0.5px;
+      text-transform: lowercase;
+    }
+  }
+
+  &__sunset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 10px;
+    background: url('../../../assets/img/icons/007-sunset.svg') center 19px no-repeat;
+
+    &-value {
+      font: {
+        size: 16px;
+        family: Barlow-Medium, sans-serif;
+      }
+    }
+
+    &-title {
+      font: {
+        size: 8px;
+        family: Barlow-Light, sans-serif;
+      }
+      letter-spacing: 0.5px;
+      text-transform: lowercase;
+    }
+  }
+
+  &__daytime {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 10px;
+    background: url('../../../assets/img/icons/sand-clock.svg') center 19px no-repeat;
+
+    &-value {
+      font: {
+        size: 16px;
+        family: Barlow-Medium, sans-serif;
+      }
+    }
+
+    &-title {
+      font: {
+        size: 8px;
+        family: Barlow-Light, sans-serif;
+      }
+      letter-spacing: 0.5px;
+      text-transform: lowercase;
+    }
+  }
+}
