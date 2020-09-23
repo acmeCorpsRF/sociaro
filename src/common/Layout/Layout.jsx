@@ -13,31 +13,24 @@ class Layout extends Component {
         sendCurrentCityData: PropTypes.func.isRequired
     };
 
-    state = {
-        token: ''
-    };
-
     componentDidMount() {
         fetch('http://localhost:3000/tokens')
             .then(response => response.json())
             .then(response => {
-                this.setState({
-                    token: response[0].token
-                });
+                if (navigator.geolocation) {
+                    let geoSuccess = (position) => {
+                        fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&APPID=${response[0].token}&units=metric`)
+                            .then(response => response.json())
+                            .then(response => {
+                                sendCurrentCityData(response);
+                            });
+                    };
+                    navigator.geolocation.getCurrentPosition(geoSuccess);
+                } else {
+                    console.log('Geolocation is not supported for this Browser/OS version yet.');
+                }
             });
         const {sendCurrentCityData} = this.props;
-        if (navigator.geolocation) {
-            let geoSuccess = (position) => {
-                fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&APPID=${this.state.token}&units=metric`)
-                    .then(response => response.json())
-                    .then(response => {
-                        sendCurrentCityData(response);
-                    });
-            };
-            navigator.geolocation.getCurrentPosition(geoSuccess);
-        } else {
-            console.log('Geolocation is not supported for this Browser/OS version yet.');
-        }
     }
 
     render() {
