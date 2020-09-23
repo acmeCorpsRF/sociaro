@@ -14,6 +14,7 @@ class Layout extends Component {
     };
 
     componentDidMount() {
+        const {sendCurrentCityData} = this.props;
         fetch('http://localhost:3000/tokens')
             .then(response => response.json())
             .then(response => {
@@ -30,7 +31,6 @@ class Layout extends Component {
                     console.log('Geolocation is not supported for this Browser/OS version yet.');
                 }
             });
-        const {sendCurrentCityData} = this.props;
     }
 
     render() {
