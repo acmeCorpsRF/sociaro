@@ -28,6 +28,15 @@ export default function citiesReducer(store = initialStore, action) {
             } else {
                 newSavedCities.push(action.response);
             }
+            newSavedCities.sort(function (a, b) {
+                let nameA = a.city.name.toLowerCase(), nameB = b.city.name.toLowerCase();
+                if (nameA < nameB)
+                    return -1;
+                if (nameA > nameB)
+                    return 1;
+                return 0;
+            });
+            console.log(newSavedCities);
             return update(store, {
                 savedCities: {
                     $merge: newSavedCities
